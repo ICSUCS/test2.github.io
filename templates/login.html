@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/login.css">
+    <title>登录</title>
+</head>
+<body>
+    <div id="headline">
+        <a href="/home"><img class="logo1" src="../static/3.PNG" alt="logo"></a>
+        <a href="/home"><div class="logoname"><p class="itemlogoname">ICSUCS</p></div></a>
+        <div class="boxr">
+            <a class="in" href="/reset">reset</a>
+        </div>
+    </div>
+    <div class="login-container">
+        <h1>登录</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="please enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="please enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-default" id="login">Login In</button>
+        </form>
+        <div class="register-link">
+            <a href="/signin">还没有账号？立即注册</a>
+        </div>
+        <div class="postmessage">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</body>
+</html>

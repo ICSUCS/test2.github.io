@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/reset.css">
+    <title>reset</title>
+</head>
+<body>
+    <div id="headline">
+        <a href="/home"><img class="logo1" src="../static/3.PNG" alt="logo"></a>
+        <a href="/home"><div class="logoname"><p class="itemlogoname">ICSUCS</p></div></a>
+    </div>
+    <div class="signin-container">
+        <h1>重设密码</h1>
+        <form action="/reset" method="post">
+            <label for="username">用户名：</label>
+            <input type="text" name="username" id="username" required>
+            <label for="password">旧密码：</label>
+            <input type="password" name="password" id="password" required>
+            <label for="newpassword">新密码：</label>
+            <input type="password" name="newpassword" id="newpassword" required>
+            <label for="password">再次输入新密码：</label>
+            <input type="password" name="doublepassword" id="doublepassword" required>
+            <br>
+            <button id="btn">点击显示图片</button>
+            <img id="img" style="display:none;">
+            <label for="passwords">图片验证码：</label>
+            <input type="text" class="form-control" id="passwords" name="passwords" required>
+            <button type="submit" class="submit">重设</button>
+        </form>
+        <div class="postmessage">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            fetch('imgcheck.jpg') // 替换为你的图片数据源API接口
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = URL.createObjectURL(blob);
+                    document.getElementById('img').src = url;
+                    document.getElementById('img').style.display = 'block';
+                })
+                .catch(error => console.error('Error fetching image:', error));
+        });
+    </script>
+</body>
+</html>
