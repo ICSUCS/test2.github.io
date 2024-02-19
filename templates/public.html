@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>about us</title>
+        <link rel="stylesheet" href="../static/public.css">
+        <link rel="icon" href="../static/3.png" type="image/png">
+        <style>
+            #bouncer {
+                position: absolute;
+                width: 75px;
+                height: 75px;
+                background-color: blueviolet;
+                border-radius: 100%;
+            }
+            .easteregg{
+                font-size: x-large;
+                transform: translate(15%,50%);
+                color: azure;
+            }
+        </style>
+        <style>
+            .content {
+                display: none;
+            }
+            .active {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="body">
+            <div id="headline">
+                <img class="logo1" src="../static/3.PNG" alt="logo">
+                <div class="logoname"><p class="itemlogoname">ICSUCS</p></div>
+            </div>
+            <div class="main-content">
+                <div id="fengexian">
+                    <h2 class="fengexian">icsucs<a href="/home" class="fengexian">/home</a></h2>
+                </div>
+                <div class="containerl">
+                    <ul id="menu" type="none">
+                        <li data-target="content1" class="menu">团队介绍</li>
+                        <br>
+                        <li data-target="content2" class="menu">网站目的</li>
+                        <br>
+                        <li data-target="content3" class="menu">功能介绍</li>
+                        <br>
+                        <li data-target="content4" class="menu">发展进程</li>
+                    </ul>
+                </div>
+                <div class="containerr">
+                    <div id="content1" class="content">
+                        <div class="contentheadline">团队介绍</div>
+                        <div class="contenttext">
+                            <p>这是内容1</p>
+                        </div>
+                    </div>
+                    <div id="content2" class="content">
+                        <div class="contentheadline">网站目的</div>
+                        <div class="contenttext">
+                            <p>这是内容2</p>
+                        </div>
+                    </div>
+                    <div id="content3" class="content">
+                        <div class="contentheadline">功能介绍</div>
+                        <div class="contenttext">
+                            <p>这是内容3</p>
+                        </div>
+                    </div>
+                    <div id="content4" class="content">
+                        <div class="contentheadline">发展进程</div>
+                        <div class="contenttext">
+                            <p>这是内容4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footspace">
+                <div class="footspace">公安注册：无<br>欢迎支持</div>
+            </div>
+        </div>
+        <a href="/easteregg" id="bouncer"><div class="easteregg">彩蛋</div></a>
+        <script>
+            const bouncer = document.getElementById('bouncer');
+            let x = 0;
+            let y = 0;
+            let dx = 2;
+            let dy = 3;
+            const maxWidth=window.innerWidth-bouncer.offsetWidth;
+            const maxHeight=window.innerHeight-bouncer.offsetHeight;
+    
+            function move() {
+                x += dx;
+                y += dy;
+    
+                if (x + bouncer.offsetWidth*1.15 >= window.innerWidth || x <= 0) {
+                    dx = -dx;
+                }
+                if (y + bouncer.offsetHeight*2 >= window.innerHeight || y <= 0) {
+                    dy = -dy;
+                }
+                if (x>maxWidth) {
+                    x=maxWidth;
+                    y=maxHeight;
+                    dx=dx;
+                    dy=-dy;
+                }
+    
+                bouncer.style.left = x + 'px';
+                bouncer.style.top = y + 'px';
+            }
+    
+            setInterval(move, 15);
+        </script>
+        <script>
+            document.getElementById('menu').addEventListener('click', function(event) {
+                if (event.target.tagName === 'LI') {
+                    var target = event.target.getAttribute('data-target');
+                    var contents = document.getElementsByClassName('content');
+                    for (var i = 0; i < contents.length; i++) {
+                        if (contents[i].id === target) {
+                            contents[i].classList.add('active');
+                        } else {
+                            contents[i].classList.remove('active');
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

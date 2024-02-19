@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width:381px){
+    body{
+        background-image:url(../static/bgi1.png);
+        background-size:cover;
+    }
+    #body{
+         position: absolute;
+         float:left;
+         width:100%;
+         height:100%;
+         display:block;
+    }
+    #headline{
+       width: 100%;
+        height: 50px;
+        background-color: rgba(15, 94, 94,0.8);
+        position: fixed;
+        top:0%;
+        display: block;
+    }
+    .logo{
+        width:50%;
+        height:50px;
+        float: left;
+        display: block;
+    }
+    .logo1{
+        padding: 1px;
+        margin: 1px;
+        border-radius: 100%;
+        width:40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: block;
+        float:left;
+    }
+    .itemlogoname{
+        float:left;
+        display: flex;
+        padding: 3px;
+        margin: 2px;
+        color: rgb(84, 107, 218);
+        justify-content: center;
+        align-items: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size:20px;
+    }
+    .mainname{
+        width: 100%;
+         position: fixed;
+         top:20%;
+         color: white;
+         display: flex;
+         font-size:60px;
+         justify-content: center;
+         align-items: center;
+    }
+    .errormessage1{
+        width: 100%;
+         position: fixed;
+         top:32%;
+         color: white;
+         display: flex;
+         font-size: 100px;
+         justify-content: center;
+         align-items: center;
+    }
+    .errormessage2{
+        width: 100%;
+         position: fixed;
+         top:47%;
+         color: white;
+         display: flex;
+         font-size: 80px;
+         justify-content: center;
+         align-items: center;
+    }
+}
+@media screen and (min-width:381px) and (max-width:440px){
+    body{
+        background-image:url(../static/bgi1.png);
+        background-size:cover;
+    }
+    #body{
+         position: absolute;
+         float:left;
+         width:100%;
+         height:100%;
+         display:block;
+    }
+    #headline{
+       width: 100%;
+        height: 50px;
+        background-color: rgba(15, 94, 94,0.8);
+        position: fixed;
+        top:0%;
+        display: block;
+    }
+    .logo{
+        width:50%;
+        height:50px;
+        float: left;
+        display: block;
+    }
+    .logo1{
+        padding: 2px;
+        margin: 2px;
+        border-radius: 100%;
+        width:46px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: block;
+        float:left;
+    }
+    .itemlogoname{
+        float:left;
+        display: block;
+        padding: 5px;
+        margin: 5px;
+        color: rgb(84, 107, 218);
+        justify-content: center;
+        align-items: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size:25px;
+    }
+    .mainname{
+        width: 100%;
+         position: fixed;
+         top:20%;
+         color: white;
+         display: flex;
+         font-size: 60px;
+         justify-content: center;
+         align-items: center;
+    }
+    .errormessage1{
+        width: 100%;
+         position: fixed;
+         top:32%;
+         color: white;
+         display: flex;
+         font-size: 100px;
+         justify-content: center;
+         align-items: center;
+    }
+    .errormessage2{
+        width: 100%;
+         position: fixed;
+         top:47%;
+         color: white;
+         display: flex;
+         font-size: 80px;
+         justify-content: center;
+         align-items: center;
+    }
+}
+@media screen and (min-width:440px) and (max-width:1025px){
+    body{
+        background-image:url(../static/bgi1.png);
+        background-size:cover;
+    }
+    #body{
+         position: absolute;
+         float:left;
+         width:100%;
+         height:100%;
+         display:block;
+    }
+    #headline{
+       width: 100%;
+        height: 50px;
+        background-color: rgba(15, 94, 94,0.8);
+        position: fixed;
+        top:0%;
+        display: block;
+    }
+    .logo{
+        width:50%;
+        height:50px;
+        float: left;
+        display: block;
+    }
+    .logo1{
+        padding: 2px;
+        margin: 2px;
+        border-radius: 100%;
+        width:46px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: block;
+        float:left;
+    }
+    .itemlogoname{
+        float:left;
+        display: block;
+        padding: 5px;
+        margin: 5px;
+        color: rgb(84, 107, 218);
+        justify-content: center;
+        align-items: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size:25px;
+    }
+    .mainname{
+        width: 100%;
+         position: fixed;
+         top:20%;
+         color: white;
+         display: flex;
+         font-size: 60px;
+         justify-content: center;
+         align-items: center;
+    }
+    .errormessage1{
+        width: 100%;
+         position: fixed;
+         top:32%;
+         color: white;
+         display: flex;
+         font-size: 100px;
+         justify-content: center;
+         align-items: center;
+    }
+    .errormessage2{
+        width: 100%;
+         position: fixed;
+         top:47%;
+         color: white;
+         display: flex;
+         font-size: 80px;
+         justify-content: center;
+         align-items: center;
+    }
+}
+@media screen and (min-width:1025px){
+    body{
+        background-image:url(../static/bgi1.png);
+        background-size:cover;
+    }
+    #body{
+         position: absolute;
+         float:left;
+         width:100%;
+         height:100%;
+         display:block;
+    }
+    #headline{
+       width: 100%;
+        height: 50px;
+        background-color: rgba(15, 94, 94,0.8);
+        position: fixed;
+        top:0%;
+        display: block;
+    }
+    .logo{
+        width:50%;
+        height:50px;
+        float: left;
+        display: block;
+    }
+    .logo1{
+        padding: 2px;
+        margin: 2px;
+        border-radius: 100%;
+        width:46px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: block;
+        float:left;
+    }
+    .itemlogoname{
+        float:left;
+        display: block;
+        padding: 5px;
+        margin: 5px;
+        color: rgb(84, 107, 218);
+        justify-content: center;
+        align-items: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size:25px;
+    }
+    .mainname{
+        width: 100%;
+         position: fixed;
+         top:20%;
+         color: white;
+         display: flex;
+         font-size: 60px;
+         justify-content: center;
+         align-items: center;
+    }
+    .errormessage1{
+        width: 100%;
+         position: fixed;
+         top:32%;
+         color: white;
+         display: flex;
+         font-size: 100px;
+         justify-content: center;
+         align-items: center;
+    }
+    .errormessage2{
+        width: 100%;
+         position: fixed;
+         top:47%;
+         color: white;
+         display: flex;
+         font-size: 80px;
+         justify-content: center;
+         align-items: center;
+    }
+}

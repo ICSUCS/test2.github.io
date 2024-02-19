@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>easteregg</title>
+        <link rel="icon" href="../static/3.png" type="image/png">
+        <style>
+            #ball {
+                width: 100px;
+                height: 100px;
+                background-color: black;
+                border-radius: 50%;
+                position: absolute;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ball"></div>
+        <script>
+            const ball = document.getElementById('ball');
+            let isDragging = false;
+            let colorInterval;
+    
+            ball.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                changeColor();
+            });
+    
+            ball.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                ball.style.left = e.pageX - ball.offsetWidth / 3 + 'px';
+                ball.style.top = e.pageY - ball.offsetHeight / 3 + 'px';
+            });
+    
+            ball.addEventListener('mouseup', () => {
+                isDragging = false;
+                clearInterval(colorInterval);
+            });
+    
+            function changeColor() {
+                colorInterval = setInterval(() => {
+                    ball.style.backgroundColor = getRandomColor();
+                }, 500); // 每隔500毫秒改变一次颜色
+            }
+    
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        </script>
+    </body>
+    </html>
